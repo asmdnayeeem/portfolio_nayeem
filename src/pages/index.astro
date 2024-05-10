@@ -5,6 +5,7 @@ import Wai from '../components/Wai.tsx'
 import Navbar from '../components/Navbar'
 import Projects from "../components/Projects"
 import Connect from "../components/Connect"
+import {BrowserRouter as Router, Route, BrowserRouter} from 'react-router-dom'
 ---
 
 <html lang="en">
@@ -17,11 +18,11 @@ import Connect from "../components/Connect"
 	</head>
 	<body>
 		<div class="">
-			<Navbar client:load/>
-			<Hero client:load/>
-			<Wai client:load/>
-			<Projects client:load/>
-			<Connect client:load/>
+				<Navbar client:load/>
+				<Hero client:load/>
+				<Wai client:load/>
+				<Projects client:load/>
+				<Connect client:load/>
 
 		</div>
 	</body>

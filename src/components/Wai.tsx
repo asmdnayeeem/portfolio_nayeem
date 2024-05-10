@@ -13,53 +13,54 @@ export default function Wai() {
     // //     }
     // //   }, [inView]);
     return (
-    <div  className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9  font-mono h-[100vh] p-5 items-center">
-      <div className="font-mono text-white font-extrabold text-[2.5rem] md:text-[4rem]">
+    <div  className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
+      <div className="font-mono text-[#F0F2F4] font-extrabold text-[2.5rem] md:text-[4rem]">
     Who am I .?
       </div>
       <div className="flex flex-wrap gap-9  flex-col justify-center items-center ">
     
-        <div className="bg-[#F0F2F4] h-[8rem] w-[28rem]  md:w-[40rem] flex justify-center items-center">
+        <div className="bg-[#F0F2F4] h-[7rem] sm:h-[8rem] w-[100%]  md:w-[40rem] flex justify-center items-center">
           <div className="w-[20%]">
-            <Hid size={70} color="#66958A" />
+            <Hid size={70} className="scale-[70%] sm:scale-100" color="#66958A" />
           </div>
           <div className="w-[70%] gap-3">
-            <p className="text-xl sm:text-2xl font-semibold">Web Developer</p>
-            <p className="sm:text-xl font-light">
+            <p className="text-md sm:text-2xl font-semibold">
+              Web Developer</p>
+            <p className="text-sm sm:text-lg md:text-xl font-light">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventore numquam nesciunt ab.
             </p>
           </div>
-          <Gar size={50} color="#66958A" />
+          {/* <Gar size={50} color="#66958A" /> */}
         </div>
     
-        <div className="bg-[#F0F2F4] h-[8rem] w-[28rem]  md:w-[40rem] flex justify-center items-center">
+        <div className="bg-[#F0F2F4] h-[7rem] sm:h-[8rem] w-[100%]  md:w-[40rem] flex justify-center items-center">
           <div className="w-[20%]">
-            <Mid size={70} color="#66958A" />
+          <Mid size={70} className="scale-[70%] sm:scale-100" color="#66958A" />
           </div>
           <div className="w-[70%] gap-3">
-            <p className="text-xl sm:text-2xl font-semibold">Flutter Developer</p>
-            <p className="sm:text-xl font-light">
+          <p className="text-md sm:text-2xl font-semibold">
+              Flutter Developer</p>
+            <p className="text-sm sm:text-lg md:text-xl font-light">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventore numquam nesciunt ab.
             </p>
           </div>
-          <Gar size={50} color="#66958A" />
         </div>
     
-        <div className="bg-[#F0F2F4] h-[8rem] w-[28rem]  md:w-[40rem] flex justify-center items-center">
+        <div className="bg-[#F0F2F4] h-[7rem] sm:h-[8rem] w-[100%]  md:w-[40rem] flex justify-center items-center">
           <div className="w-[20%]">
-            <Hid size={70} color="#66958A" />
+          <Hid size={70} className="scale-[70%] sm:scale-100" color="#66958A" />
           </div>
           <div className="w-[70%] gap-3">
-            <p className="text-xl sm:text-2xl font-semibold">Web Developer</p>
-            <p className="sm:text-xl font-light">
+          <p className="text-md sm:text-2xl font-semibold">
+              DevOps Enthusiastic</p>
+            <p className="text-sm sm:text-lg md:text-xl font-light">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventore numquam nesciunt ab.
             </p>
           </div>
-          <Gar size={50} color="#66958A" />
-        </div>
+        </div> 
 
         {/* <div className="bg-[#F0F2F4] h-[8rem] w-[40rem] flex justify-center items-center">
           <div className="w-[20%]">
