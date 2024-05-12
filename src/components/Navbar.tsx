@@ -9,13 +9,10 @@ export default function Navbar() {
     const nav: HTMLElement | any = document.getElementById("nav");
     const sidenav: HTMLElement | any = document.getElementById("sidenav");
     if (isOpen) {
-      sidenav.classList.add("w-[100%]");
-      sidenav.classList.add("opacity-100");
-      sidenav.classList.remove("w-0");
+      sidenav.classList.add("translate-x-0");
     } else {
-      sidenav.classList.remove("opacity-100");
-      sidenav.classList.remove("w-[100%]");
-      sidenav.classList.add("w-0");
+      sidenav.classList.remove("translate-x-0");
+ 
     }
     if (inView) {
       navbar.classList.add("opacity-0");
@@ -36,7 +33,7 @@ export default function Navbar() {
   return (
     <div className="relative top-0">
       <div
-        className="fixed font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 opacity-0"
+        className="fixed  font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 w-full translate-x-full"
         id="sidenav"
       >
         <AiOutlineClose
@@ -54,7 +51,7 @@ export default function Navbar() {
       <div
         ref={nav}
         id="nav"
-        className="z-10 sticky top-0 text-[#66958A] font-mono font-bold text-2xl text-start w-[100%] p-5 pl-10 bg-[#F0F2F4] duration-700"
+        className="z-10 sticky top-0 right-0 text-[#66958A] font-mono font-bold text-2xl text-start w-[100%] p-5 pl-10 bg-[#F0F2F4] duration-700"
       >
         <div className="flex justify-between items-center">
           <h1>Nayeem.</h1>
