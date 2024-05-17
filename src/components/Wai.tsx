@@ -13,7 +13,7 @@ export default function Wai() {
     // //     }
     // //   }, [inView]);
     return (
-    <div  className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
+    <div id="Wai" className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
       <div className="font-mono text-[#F0F2F4] font-extrabold text-[2.5rem] md:text-[4rem]">
     Who am I .?
       </div>
@@ -25,7 +25,7 @@ export default function Wai() {
           </div>
           <div className="w-[70%] gap-3">
             <p className="text-md sm:text-2xl font-semibold">
-              Web Developer</p>
+              Full Stack Developer</p>
             <p className="text-sm sm:text-lg md:text-xl font-light">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventore numquam nesciunt ab.

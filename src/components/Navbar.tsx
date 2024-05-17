@@ -1,6 +1,8 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { HashLink as Link } from "react-router-hash-link";
+
 export default function Navbar() {
   const { ref: nav, inView: inView } = useInView();
   const [isOpen, setOpen]: any = useState(false);
@@ -10,9 +12,10 @@ export default function Navbar() {
     const sidenav: HTMLElement | any = document.getElementById("sidenav");
     if (isOpen) {
       sidenav.classList.add("translate-x-0");
+      sidenav.classList.remove("translate-x-full");
     } else {
       sidenav.classList.remove("translate-x-0");
- 
+      sidenav.classList.add("translate-x-full");
     }
     if (inView) {
       navbar.classList.add("opacity-0");
@@ -33,7 +36,7 @@ export default function Navbar() {
   return (
     <div className="relative top-0">
       <div
-        className="fixed  font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 w-full translate-x-full"
+        className="fixed  font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 w-[30rem] right-0 translate-x-full"
         id="sidenav"
       >
         <AiOutlineClose
@@ -42,11 +45,31 @@ export default function Navbar() {
           className="self-end"
           onClick={() => setOpen(false)}
         />
-        <h2 className="text-3xl text-[#F0F2F4]">Home</h2>
+        <button onClick={() => setOpen(false)}>
+          <Link to="#Home" className=" text-3xl text-[#F0F2F4]" smooth>
+            Home
+          </Link>
+        </button>
+        <button onClick={() => setOpen(false)}>
+          <Link to="#Wai" className=" text-3xl text-[#F0F2F4]" smooth>
+            Who am I .?
+          </Link>
+        </button>
+        <button onClick={() => setOpen(false)}>
+          <Link to="#myworks" className=" text-3xl text-[#F0F2F4]" smooth>
+            My Works
+          </Link>
+        </button>
+        <button onClick={() => setOpen(false)}>
+          <Link to="#connect" className=" text-3xl text-[#F0F2F4]" smooth>
+            Let's Connect
+          </Link>
+        </button>
+        {/* <h2 className="text-3xl text-[#F0F2F4]">Home</h2>
         <h2 className="text-3xl text-[#F0F2F4]">Who am I .?</h2>
         <h2 className="text-3xl text-[#F0F2F4]">My Works.</h2>
         <h2 className="text-3xl text-[#F0F2F4]">Let's Connect</h2>
-        
+         */}
       </div>
       <div
         ref={nav}

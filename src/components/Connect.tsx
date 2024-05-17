@@ -4,7 +4,7 @@ import { IoMail } from "react-icons/io5";
 import { Link} from "react-router-dom";
 export default function Connect() {
     return (
-    <div className='bg-[#66958A] relative flex flex-col gap-6 justify-center items-center font-mono h-[15rem] w-[100%]'>
+    <div id="connect" className='bg-[#66958A] relative flex flex-col gap-6 justify-center items-center font-mono h-[15rem] w-[100%]'>
         <p className='text-2xl text-[#F0F2F4] font-semibold'>
             Let's Connect
         </p>

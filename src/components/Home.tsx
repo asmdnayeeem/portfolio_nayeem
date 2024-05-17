@@ -15,10 +15,21 @@
 //   );
 // }
 import React from 'react'
+import Navbar from './Navbar'
+import Hero from './Hero'
+import Wai from './Wai'
+import Projects from './Projects'
+import Connect from './Connect'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Navbar />
+				<Hero/>
+				<Wai />
+				<Projects />
+				<Connect />
+    </div>
   )
 }
 

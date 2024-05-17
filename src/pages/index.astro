@@ -1,10 +1,6 @@
 ---
 import '../main.css'
-import Hero from '../components/Hero.tsx'
-import Wai from '../components/Wai.tsx'
-import Navbar from '../components/Navbar'
-import Projects from "../components/Projects"
-import Connect from "../components/Connect"
+import { App } from '../components/App'
 ---
 
 <html lang="en">
@@ -17,12 +13,7 @@ import Connect from "../components/Connect"
 	</head>
 	<body>
 		<div class="">
-				<Navbar client:load/>
-				<Hero client:load/>
-				<Wai client:load/>
-				<Projects client:load/>
-				<Connect client:load/>
-
+				<App client:only/>
 		</div>
 	</body>
 </html>
