@@ -1,12 +1,31 @@
-import first from "../images/Screenshot 2023-09-02 153332.png?url"
-
-export default function Card() {
+type info = {
+  img: String;
+  title: String;
+  details: String;
+  tech:String;
+};
+export default function Card(data: info) {
   return (
-    <div className='group relative flex  md:flex-row flex-col  gap-5 justify-around items-center rounded-lg md:h-[18rem]'>
-        <img src={first} alt="" className='w-full sm:min-w-[495px] max-w-[40rem] content-center  rounded-lg hover:shadow-xl hover:shadow-[#66958A] duration-500'/>
-   
-    <div className="flex h-[80%] max-w-[40rem] text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quam temporibus pariatur, voluptates aut eligendi commodi. Perspiciatis iure provident nulla distinctio tempora saepe at aspernatur officia et quaerat. Quis omnis labore dicta.</div>
+    <div className="group  relative flex  flex-col  gap-5 justify-center items-center rounded-lg ">
+      <img
+        src={String(data.img)}
+        alt=""
+        className="w-full max-w-[40rem] content-center rounded-lg group-hover:shadow-xl  group-hover:shadow-[#66958A] duration-500"
+      />
+      <div className="max-w-[40rem] flex flex-col h-[80%] flex-wrap gap-2 justify-start ">
+      <p className="text-md sm:text-2xl font-semibold">
+          {data.title}
+        </p>
+        <p>
+          {data.details}
+          </p>
+          <p className="text-md sm:text-lg font-semibold">
+          Tech Stack:
+          <span className="pl-2  text-md font-normal">
+           {data.tech}
+          </span>
+          </p>
+      </div>
     </div>
-  
-  )
+  );
 }
