@@ -1,7 +1,13 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HiOutlineComputerDesktop as Hid } from "react-icons/hi2";
 import {HiOutlineDevicePhoneMobile as Mid } from "react-icons/hi2";
 import {HiOutlineCommandLine as Hib } from "react-icons/hi2";
+import { useGSAP } from "@gsap/react";
 export default function Wai() {
+gsap.registerPlugin(ScrollTrigger);
+  const wai = useRef<HTMLDivElement>(null);
 type details={
   element:any;
   title:String;
@@ -24,8 +30,23 @@ const info:details=[
     discription:"Python Java C++ Go Postman VSCode Android_Studio Burp_Suit"
   },
 ]
+useGSAP(()=>{
+  gsap.from(wai.current,{
+    scrollTrigger:{
+      trigger:wai.current,
+      start:"top 50%",
+      end:"bottom 80%",
+      scrub:2,
+    },
+    duration:1,
+    opacity:0,
+    scale:0.75,
+  })
+ 
+})
     return (
-    <div id="Wai" className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
+      <div className="bg-[#66958A]">
+    <div id="Wai" ref={wai} className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
       <div className="font-mono text-[#F0F2F4] font-extrabold text-[2.5rem] md:text-[4rem]">
     Who am I .?
       </div>
@@ -48,5 +69,6 @@ const info:details=[
         ))}
       </div>
     </div>
+        </div>
   );
 }
