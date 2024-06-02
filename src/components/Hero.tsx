@@ -35,11 +35,11 @@ import Typewriter from "typewriter-effect";
 // }
 export default function Hero() {
   return (
-    <div id="Home" className="flex justify-center items-center relative top-0 h-[100vh] min-h-[30rem] w-full bg-[#F0F2F4] overflow-clip">
+    <div id="Home" className="flex justify-center items-center relative top-0 h-[90vh] min-h-[30rem] w-full bg-[#F0F2F4] overflow-clip">
       {/* <div className='h-[200vh] bg-[#66958A] w-[12rem] absolute  right-0 rotate-[30deg] scale-[1.2] -translate-x-[14rem]'>
       </div> */}
       <div className="text-[#66958A] flex flex-col h-full justify-center items-start p-2 w-[30rem] gap-4">
-        <h1 className=" font-extrabold font-mono text-5xl">
+        <h1 className=" font-extrabold font-mono text-4xl sm:text-5xl">
           {/* <Typewriter
              options={{
                strings: ["Hello:)", "welcome"],
@@ -49,9 +49,9 @@ export default function Hero() {
            /> */}
           Hello :)
         </h1>
-        <div className="text-5xl font-extrabold font-mono">I'm Nayeem</div>
-        <div className="text-left text-black text-xl font-mono">
-        "Enthusiastic coder eager to expand expertise in diverse areas of tech and product innovation."
+        <div className="text-4xl sm:text-5xl font-extrabold font-mono">I'm Nayeem</div>
+        <div className="text-left text-black text-lg sm:text-xl font-mono">
+        Enthusiastic coder eager to expand expertise in diverse areas of tech and product innovation.
         </div>
       </div>
       <div>

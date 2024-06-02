@@ -17,7 +17,7 @@ const info:details=[
   {
     element:<Hid size={70} className="scale-[70%] sm:scale-100" color="#66958A" />    ,
     title:"Full Stack Developer",
-    discription:"HTML CSS Javascript/Typescript TailwindCSS React.js Next.js Astro.JS Express.js Flask Go"
+    discription:"HTML CSS Javascript/Typescript TailwindCSS React.js Next.js Astro.JS Express.js Flask"
   },
   {
     element:<Mid size={70} className="scale-[70%] sm:scale-100" color="#66958A" />    ,
@@ -52,15 +52,15 @@ useGSAP(()=>{
       <div className="flex flex-wrap gap-9  flex-col justify-center items-center ">
   
         {info.map((data,index:any)=>(
-            <div key={index} className="bg-[#F0F2F4] h-[7rem] sm:h-[8rem] w-[100%]  md:w-[40rem] flex justify-center items-center">
+            <div key={index} className="bg-[#F0F2F4] h-[7rem] sm:h-[8rem] w-[100%]  md:w-[40rem] flex justify-center items-center rounded-sm">
             <div className="w-[20%]">
               {data.element}
             </div>
-            <div className="w-[70%] gap-3">
-              <p className="text-md sm:text-2xl font-semibold">
+            <div className="w-[75%] gap-3">
+              <p className="text-md sm:text-2xl font-bold">
               {data.title}
                 </p>
-              <p className="text-sm sm:text-lg md:text-xl font-light">
+              <p className="text-sm sm:text-lg md:text-xl text-left font-light">
                 {data.discription}
               </p>
             </div>
