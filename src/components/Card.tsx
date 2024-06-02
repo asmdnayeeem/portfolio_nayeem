@@ -1,12 +1,15 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef } from "react";
+// import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+// import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { MdArrowOutward as Arr } from "react-icons/md";
 type info = {
   img: String;
+  link: string;
   title: String;
   details: String;
-  tech:String;
+  tech: String;
 };
 export default function Card(data: info) {
   // gsap.registerPlugin(ScrollTrigger);
@@ -29,21 +32,20 @@ export default function Card(data: info) {
       <img
         src={String(data.img)}
         alt=""
-        className="w-full max-w-[40rem] content-center rounded-lg group-hover:shadow-xl  group-hover:shadow-[#66958A] duration-500"
+        className="w-full object-cover  max-w-[40rem]  content-center rounded-lg group-hover:shadow-xl  group-hover:shadow-[#66958A] duration-500"
       />
       <div className="max-w-[40rem] flex flex-col h-[80%] flex-wrap gap-2 justify-start ">
-      <p className="text-md sm:text-2xl font-semibold">
+        <p className="text-md sm:text-2xl font-bold flex  justify-between">
           {data.title}
+          <Link to={data.link} target="_blank">
+            <Arr size={35} className="hover:rotate-45 duration-150"/>
+          </Link>
         </p>
-        <p>
-          {data.details}
-          </p>
-          <p className="text-md sm:text-lg font-semibold">
+        <p>{data.details}</p>
+        <p className="text-md sm:text-lg font-bold">
           Tech Stack:
-          <span className="pl-2  text-md font-normal">
-           {data.tech}
-          </span>
-          </p>
+          <span className="pl-2  text-md font-normal">{data.tech}</span>
+        </p>
       </div>
     </div>
   );

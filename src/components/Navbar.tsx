@@ -36,32 +36,32 @@ export default function Navbar() {
   return (
     <div className="relative top-0">
       <div
-        className="fixed  font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 w-[30rem] right-0 translate-x-full"
+        className="fixed  font-mono items-center top-0 bg-[#66958A] h-[100vh] z-20  gap-9 flex p-5 flex-col duration-700 sm:w-[30rem] right-0 translate-x-full"
         id="sidenav"
       >
         <AiOutlineClose
           size={40}
           color="#F0F2F4"
-          className="self-end"
+          className="self-end scale-75 sm:scale-100"
           onClick={() => setOpen(false)}
         />
         <button onClick={() => setOpen(false)}>
-          <Link to="#Home" className=" text-3xl text-[#F0F2F4]" smooth>
+          <Link to="#Home" className="text-2xl sm:text-3xl text-[#F0F2F4]" smooth>
             Home
           </Link>
         </button>
         <button onClick={() => setOpen(false)}>
-          <Link to="#Wai" className=" text-3xl text-[#F0F2F4]" smooth>
+          <Link to="#Wai" className=" text-2xl sm:text-3xl text-[#F0F2F4]" smooth>
             Who am I .?
           </Link>
         </button>
         <button onClick={() => setOpen(false)}>
-          <Link to="#myworks" className=" text-3xl text-[#F0F2F4]" smooth>
+          <Link to="#myworks" className=" text-2xl sm:text-3xl text-[#F0F2F4]" smooth>
             My Works
           </Link>
         </button>
         <button onClick={() => setOpen(false)}>
-          <Link to="#connect" className=" text-3xl text-[#F0F2F4]" smooth>
+          <Link to="#connect" className=" text-2xl sm:text-3xl text-[#F0F2F4]" smooth>
             Let's Connect
           </Link>
         </button>
