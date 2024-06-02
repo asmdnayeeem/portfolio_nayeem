@@ -36,7 +36,6 @@ useGSAP(()=>{
       trigger:wai.current,
       start:"top 50%",
       end:"bottom 80%",
-      scrub:2,
     },
     duration:1,
     opacity:0,
@@ -46,7 +45,7 @@ useGSAP(()=>{
 })
     return (
       <div className="bg-[#66958A]">
-    <div id="Wai" ref={wai} className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] font-mono  p-5 items-center">
+    <div id="Wai" ref={wai} className=" relative bg-[#66958A]   flex flex-col md:flex-row justify-around md:gap-9 flex-wrap h-[100vh] min-h-[40rem] max-h-[50rem] font-mono  p-5 items-center">
       <div className="font-mono text-[#F0F2F4] font-extrabold text-[2.5rem] md:text-[4rem]">
     Who am I .?
       </div>

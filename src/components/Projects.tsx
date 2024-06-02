@@ -1,6 +1,24 @@
 import Card from "./Card";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
 import first from "../images/Screenshot 2023-09-02 153332.png?url";
 export default function Projects() {
+  gsap.registerPlugin(ScrollTrigger);
+  const card = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    gsap.from(card.current, {
+      scrollTrigger: {
+        trigger: card.current,
+        start: "top 80%",
+      },
+      duration: 1,
+      opacity: 0,
+      scale: 0.75,
+    });
+  })
+
 type info={
     img: String;
     title:String
@@ -43,7 +61,7 @@ const data: info = [
       <div className="font-mono relative text-[#66958A] font-extrabold text-[2.5rem] md:text-[4rem] self-start ">
         My Works.
       </div>
-      <div className="grid md:grid-cols-2 gap-9 justify-items-center  w-full ">
+      <div ref={card} className="grid md:grid-cols-2 gap-9 justify-items-center  w-full ">
         {data.map((item, index: any) => (
           <div key={index}>
             <Card {...item}/>
