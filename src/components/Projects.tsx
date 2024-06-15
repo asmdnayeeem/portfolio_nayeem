@@ -6,7 +6,7 @@ import { useRef } from "react";
 import flex from "../images/flex.png?url"
 import vulcanzy from "../images/vulcanzy.png?url"
 import go from "../images/go.png?url"
-import lma from "../images/lma.png?url"
+//import lma from "../images/lma.png?url"
 
 
 export default function Projects() {
@@ -24,43 +24,36 @@ export default function Projects() {
     });
   })
 
-type info={
+  type info = {
     img: String;
-    link:string;
-    title:String
+    link: string;
+    title: String
     details: String;
-    tech:String;
-}[];
-const data: info = [
+    tech: String;
+  }[];
+  const data: info = [
     {
       img: flex,
-      link:"https://www.flexfever.in/",
-      title:"Flex Fever",
-      details:"Designed the promotional website for Flex Fever, a custom apparel company specializing in personalized t-shirts, hoodies, and other garments",
-      tech:"React.js, TailwinCSS"
+      link: "https://www.flexfever.in/",
+      title: "Flex Fever",
+      details: "Designed the promotional website for Flex Fever, a custom apparel company specializing in personalized t-shirts, hoodies, and other garments",
+      tech: "React.js, TailwinCSS"
     },
     {
       img: vulcanzy,
-      link:"https://vulcanzy-2024.vercel.app/",
-      title:"Vulcanzy 2024",
-      details:"Coordinated Vulcanzy 2024, the annual cultural fest at NIT Andhra Pradesh , working closely with a team of four members to develop and launch the event’s website.",
-      tech:"React.js, TailwinCSS"
+      link: "https://vulcanzy-2024.vercel.app/",
+      title: "Vulcanzy 2024",
+      details: "Coordinated Vulcanzy 2024, the annual cultural fest at NIT Andhra Pradesh , working closely with a team of four members to develop and launch the event’s website.",
+      tech: "React.js, TailwinCSS"
 
-      },
-    {
-      img: lma,
-      link:"",
-      title:"Laundry Management Web App",
-      details:"Developed a web application to manage laundry services, including order tracking, customer management.",
-      tech:"React.js ,TailwinCSS ,Express.js ,MongoDB, JWT for authorization"
-      },
+    },
     {
       img: go,
-      link:"https://github.com/asmdnayeeem/go_backend",
-      title:"Go Authentication and Authorization Server",
-      details:"Developed a robust authentication and authorization server using Go, providing secure access control for various applications",
-      tech:"Go (Golang), JWT ,Bcrypt, PostgreSQL, RESTFUL API"
-      },
+      link: "https://github.com/asmdnayeeem/go_backend",
+      title: "Go Authentication and Authorization Server",
+      details: "Developed a robust authentication and authorization server using Go, providing secure access control for various applications",
+      tech: "Go (Golang), JWT ,Bcrypt, PostgreSQL, RESTFUL API"
+    },
   ];
 
   return (
@@ -74,7 +67,7 @@ const data: info = [
       <div ref={card} className="grid md:grid-cols-2 gap-9 justify-items-center  w-full ">
         {data.map((item, index: any) => (
           <div key={index}>
-            <Card {...item}/>
+            <Card {...item} />
           </div>
         ))}
       </div>
