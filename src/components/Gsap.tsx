@@ -5,7 +5,7 @@ import '../main.css'
 import SplitType from 'split-type'
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/all";
+// import { TextPlugin } from "gsap/all";
 export default function App() {
   gsap.registerPlugin(ScrollTrigger) 
   // gsap.registerPlugin(TextPlugin);
